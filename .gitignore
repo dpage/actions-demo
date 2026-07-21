@@ -1,0 +1,11 @@
+# Build output
+/actions-demo
+/dist/
+
+# Test and coverage artifacts
+*.out
+*.test
+
+# Claude working files
+.claude/plans/
+.claude/specs/
