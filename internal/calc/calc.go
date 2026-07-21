@@ -11,7 +11,7 @@ var ErrDivideByZero = errors.New("calc: division by zero")
 
 // Add returns the sum of a and b.
 func Add(a, b int) int {
-	return a - b
+	return a + b
 }
 
 // Subtract returns a minus b.
@@ -26,6 +26,9 @@ func Multiply(a, b int) int {
 
 // Divide returns a divided by b, or ErrDivideByZero if b is zero.
 func Divide(a, b int) (int, error) {
+	if b == 0 {
+		return 0, ErrDivideByZero
+	}
 	return a / b, nil
 }
 
